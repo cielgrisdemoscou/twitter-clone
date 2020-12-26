@@ -1,10 +1,6 @@
 # twitter-clone 🐧
 iOS Twitter Clone with Swift &amp; Firebase
 
-<p>
- This project is a clone of Twitter.
-</p>
-
 ## How to run a demo app
 
 1. Download the source code by cloning this repository
