@@ -18,10 +18,13 @@
 		9F17AC2D25921CD7004DA248 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17AC2C25921CD7004DA248 /* NotificationController.swift */; };
 		9F17AC3025921CE3004DA248 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17AC2F25921CE3004DA248 /* ConversationController.swift */; };
 		9F17AC3325922581004DA248 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17AC3225922581004DA248 /* Extensions.swift */; };
+		9F26E37525975990008162CF /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26E37425975990008162CF /* UploadTweetController.swift */; };
+		9F26E37825976269008162CF /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26E37725976269008162CF /* CaptionTextView.swift */; };
 		9F6A4F6E2594B10B000F6649 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A4F6D2594B10B000F6649 /* LoginController.swift */; };
 		9F6A4F712594B178000F6649 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A4F702594B178000F6649 /* RegistrationController.swift */; };
 		9F6A4F742595CDD8000F6649 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A4F732595CDD8000F6649 /* Utilities.swift */; };
 		9F8BF57E2597065C00204C03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BF57D2597065B00204C03 /* Constants.swift */; };
+		9FD7592C259768A1005D8E3C /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7592B259768A1005D8E3C /* TweetService.swift */; };
 		9FF411EB25970F7B0005C953 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF411EA25970F7B0005C953 /* AuthService.swift */; };
 		9FF411EF259716140005C953 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FF411EE259716140005C953 /* GoogleService-Info.plist */; };
 		9FF411F22597311F0005C953 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF411F12597311F0005C953 /* UserService.swift */; };
@@ -46,10 +49,13 @@
 		9F17AC2C25921CD7004DA248 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9F17AC2F25921CE3004DA248 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		9F17AC3225922581004DA248 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9F26E37425975990008162CF /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		9F26E37725976269008162CF /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		9F6A4F6D2594B10B000F6649 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9F6A4F702594B178000F6649 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		9F6A4F732595CDD8000F6649 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9F8BF57D2597065B00204C03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9FD7592B259768A1005D8E3C /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		9FF411EA25970F7B0005C953 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9FF411EE259716140005C953 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FF411F12597311F0005C953 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			children = (
 				9FF411EA25970F7B0005C953 /* AuthService.swift */,
 				9FF411F12597311F0005C953 /* UserService.swift */,
+				9FD7592B259768A1005D8E3C /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 				9F17AC2925921CC5004DA248 /* ExploreController.swift */,
 				9F17AC2C25921CD7004DA248 /* NotificationController.swift */,
 				9F17AC2F25921CE3004DA248 /* ConversationController.swift */,
+				9F26E37425975990008162CF /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 		9F17AC1E25921853004DA248 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F26E37725976269008162CF /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,12 +312,14 @@
 			files = (
 				9FF411F22597311F0005C953 /* UserService.swift in Sources */,
 				9F17AC2D25921CD7004DA248 /* NotificationController.swift in Sources */,
+				9F26E37825976269008162CF /* CaptionTextView.swift in Sources */,
 				9F17AC0725921809004DA248 /* AppDelegate.swift in Sources */,
 				9F6A4F742595CDD8000F6649 /* Utilities.swift in Sources */,
 				9F17AC2A25921CC5004DA248 /* ExploreController.swift in Sources */,
 				9F17AC3325922581004DA248 /* Extensions.swift in Sources */,
 				9F6A4F6E2594B10B000F6649 /* LoginController.swift in Sources */,
 				9FF411EB25970F7B0005C953 /* AuthService.swift in Sources */,
+				9F26E37525975990008162CF /* UploadTweetController.swift in Sources */,
 				9FF411F525974B2B0005C953 /* User.swift in Sources */,
 				9F17AC0925921809004DA248 /* SceneDelegate.swift in Sources */,
 				9F17AC242592193D004DA248 /* MainTabController.swift in Sources */,
@@ -316,6 +327,7 @@
 				9F6A4F712594B178000F6649 /* RegistrationController.swift in Sources */,
 				9F17AC2725921C95004DA248 /* FeedController.swift in Sources */,
 				9F8BF57E2597065C00204C03 /* Constants.swift in Sources */,
+				9FD7592C259768A1005D8E3C /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
