@@ -30,6 +30,7 @@ class CaptionTextView: UITextView {
         heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         addSubview(placeholderLabel)
+        placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
         placeholderLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         placeholderLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 4).isActive = true
         
