@@ -17,9 +17,9 @@ class UserCell: UITableViewCell {
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.backgroundColor = .twitterBlue
+        iv.backgroundColor = .white
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.heightAnchor.constraint(equalToConstant: 40).isActive = true
         iv.widthAnchor.constraint(equalToConstant: 40).isActive = true

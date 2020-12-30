@@ -9,6 +9,7 @@ import UIKit
 
 protocol TweetCellDelegate: class {
     func handleProfileImageTapped(_ cell: TweetCell)
+    func handleReplyTapped(_ cell: TweetCell)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -23,13 +24,13 @@ class TweetCell: UICollectionViewCell {
     
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         iv.layer.masksToBounds = true
         iv.heightAnchor.constraint(equalToConstant: 48).isActive = true
         iv.widthAnchor.constraint(equalToConstant: 48).isActive = true
         iv.layer.cornerRadius = 48 / 2
-        iv.backgroundColor = .twitterBlue
+        iv.backgroundColor = .white
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
         iv.addGestureRecognizer(tap)
@@ -149,7 +150,7 @@ class TweetCell: UICollectionViewCell {
     }
     
     @objc func handleCommentTapped() {
-        
+        delegate?.handleReplyTapped(self)
     }
     
     @objc func handleRetweetTapped() {
