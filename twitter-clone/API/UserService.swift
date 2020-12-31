@@ -37,7 +37,7 @@ struct UserService {
     func followUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
-        REF_USER_FOLLOWING.child(currentUid).updateChildValues([currentUid: 1]) { (err, ref) in
+        REF_USER_FOLLOWING.child(currentUid).updateChildValues([uid: 1]) { (err, ref) in
             REF_USER_FOLLOWERS.child(uid).updateChildValues([currentUid: 1], withCompletionBlock: completion)
         }
     }
@@ -45,7 +45,7 @@ struct UserService {
     func unfollowUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
-        REF_USER_FOLLOWING.child(currentUid).child(currentUid).removeValue { (err, ref) in
+        REF_USER_FOLLOWING.child(currentUid).child(uid).removeValue { (err, ref) in
             REF_USER_FOLLOWERS.child(uid).child(currentUid).removeValue(completionBlock: completion)
         }
     }
@@ -60,7 +60,7 @@ struct UserService {
     }
     
     func fetchUserStats(uid: String, completion: @escaping(UserRelationStats) -> Void) {
-        REF_USER_FOLLOWING.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+        REF_USER_FOLLOWERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             let followers = snapshot.children.allObjects.count
             
             REF_USER_FOLLOWING.child(uid).observeSingleEvent(of: .value) { (snapshot) in
